@@ -1,5 +1,7 @@
 #include <stdio.h>
 
 int main() {
-    printf("Goodbye world.\n");
+    char buf[128];
+    fgets(buf, sizeof buf, stdin);
+    printf("Goodbye %s.\n", buf);
 }
